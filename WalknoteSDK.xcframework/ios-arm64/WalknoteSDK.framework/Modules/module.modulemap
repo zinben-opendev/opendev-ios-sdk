@@ -1,0 +1,8 @@
+framework module "WalknoteSDK" {
+    umbrella header "WalknoteSDK.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}
