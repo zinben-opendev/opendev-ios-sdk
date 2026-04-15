@@ -1,6 +1,6 @@
-# WalknoteSDK for iOS
+# OpenDevSDK for iOS
 
-Walknote SDK for iOS - A minimalist lifestyle application SDK built with Kotlin Multiplatform.
+OpenDev SDK for iOS — Kotlin Multiplatform SDK used by the Walknote application.
 
 ## Features
 
@@ -27,7 +27,7 @@ platform :ios, '13.0'
 use_frameworks!
 
 target 'YourApp' do
-  pod 'WalknoteSDK', '~> 1.0.0'
+  pod 'OpenDevSDK', '~> 1.0.0'
 end
 ```
 
@@ -39,7 +39,7 @@ pod install
 
 ### Manual Installation
 
-1. Download `WalknoteSDK.xcframework` from the [Releases](https://github.com/syoohao/walknote-ios-sdk/releases) page
+1. Download `OpenDevSDK.xcframework` from the [Releases](https://github.com/zinben-opendev/opendev-ios-sdk/releases) page
 2. Drag it into your Xcode project
 3. Add it to "Frameworks, Libraries, and Embedded Content" with "Embed & Sign"
 
@@ -48,24 +48,24 @@ pod install
 ### Initialize SDK
 
 ```swift
-import WalknoteSDK
+import OpenDevSDK
 
 // Initialize the SDK
-let config = WalknoteConfig(
+let config = OpenDevConfig(
     cdnBaseUrl: "https://cdn.example.com/sdk",
     cdnToken: "your-token",
     channelKey: "google_global",
     environment: .staging
 )
 
-WalknoteSDK.shared.initialize(config: config)
+OpenDevSDK.shared.initialize(config: config)
 ```
 
 ### Authentication
 
 ```swift
 // Google Sign-In
-WalknoteSDK.shared.login(method: .google) { result in
+OpenDevSDK.shared.login(method: .google) { result in
     switch result {
     case .success(let user):
         print("Logged in: \(user.id)")
@@ -75,7 +75,7 @@ WalknoteSDK.shared.login(method: .google) { result in
 }
 
 // Logout
-WalknoteSDK.shared.logout()
+OpenDevSDK.shared.logout()
 ```
 
 ## Dependencies
@@ -89,7 +89,11 @@ This SDK includes the following third-party dependencies:
 
 ## Documentation
 
-For detailed documentation, please visit our [Wiki](https://github.com/syoohao/walknote-ios-sdk/wiki).
+For detailed documentation, please visit our [Wiki](https://github.com/zinben-opendev/opendev-ios-sdk/wiki).
+
+## Related distributions
+
+- **JavaScript / TypeScript (Kotlin/Wasm)**: NPM package [`@opendev/sdk`](https://www.npmjs.com/package/@opendev/sdk) — sources and publish flow live in the main Walknote monorepo under `publishing/npm-sdk/` (see `opendev-web-sdk`).
 
 ## Changelog
 
@@ -97,10 +101,10 @@ See [CHANGELOG.md](CHANGELOG.md) for release notes.
 
 ## License
 
-WalknoteSDK is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+OpenDevSDK is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
 ## Contact
 
 - Email: contact@zinben.com
-- GitHub: [@syoohao](https://github.com/syoohao)
+- GitHub: [@zinben-opendev](https://github.com/zinben-opendev)
 
