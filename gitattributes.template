@@ -1,0 +1,5 @@
+# 复制到 opendev-ios-sdk 仓库根目录并重命名为 `.gitattributes` 后执行 `git lfs install`。
+# 用于缓解 GitHub 对单个大 blob 的警告（Simulator / device 切片中的二进制）。
+# 路径需与仓库内 XCFramework 实际布局一致（OpenDevSDK.xcframework）。
+
+OpenDevSDK.xcframework/**/OpenDevSDK filter=lfs diff=lfs merge=lfs -text

@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '2.0.0'
   s.summary          = 'OpenDev SDK for iOS (prebuilt XCFramework from Kotlin Multiplatform)'
   s.description      = <<-DESC
-    OpenDev SDK iOS binary distribution. Built from the Walknote monorepo :core module.
+    OpenDev SDK iOS binary distribution (Kotlin Multiplatform static XCFramework).
     Consume via CocoaPods :git + :tag pointing at this repository.
   DESC
   s.homepage         = 'https://github.com/zinben-opendev/opendev-ios-sdk'
@@ -18,9 +18,9 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'OpenDevSDK.xcframework'
   s.frameworks = 'Foundation', 'UIKit', 'Security', 'CryptoKit'
   s.libraries = 'c++'
-  s.dependency 'GoogleSignIn', '~> 9.0'
-  s.dependency 'FBSDKCoreKit', '~> 18.0'
-  s.dependency 'FBSDKLoginKit', '~> 18.0'
+  s.dependency 'GoogleSignIn', '~> 7.0'
+  s.dependency 'FBSDKCoreKit', '~> 16.0'
+  s.dependency 'FBSDKLoginKit', '~> 16.0'
   s.dependency 'WechatOpenSDK', '~> 2.0.4'
   s.static_framework = true
   s.pod_target_xcconfig = {
