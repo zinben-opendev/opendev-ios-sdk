@@ -1,10 +1,18 @@
 # OpenDev SDK（iOS）
 
-**语言说明：** 默认以英文 [`README.md`](README.md) 为准；本页为简体中文补充。
+**文档语言：** 默认以英文 [`README.md`](README.md) 为准；本页为简体中文补充。
 
 OpenDev SDK 为 Kotlin Multiplatform 客户端库（认证、支付、同步、存储等）。本仓库提供 **预构建 `OpenDevSDK.xcframework`** 与 **CocoaPods podspec**，便于在未走 Maven Central / Trunk 时通过 GitHub 集成。
 
 > **品牌：** 对外产品名为 **OpenDev SDK**。文中若出现 **Walknote**，仅作示例宿主应用说明；第三方应用应使用自有品牌。
+
+## 技术栈与语言
+
+| 方面 | 说明 |
+|------|------|
+| **SDK 源码实现**（不在本仓） | **Kotlin Multiplatform**，Apple 目标编译为 **framework** 二进制，打包进 **XCFramework**。 |
+| **本仓产物** | 预编译 **XCFramework**；**`OpenDevSDK.podspec`** 为 **Ruby**（CocoaPods 元数据，非 SDK 业务逻辑）。 |
+| **集成方应用** | 通常为 **Swift** 或 **Objective-C**（Xcode / CocoaPods 或手动嵌入）。 |
 
 ## 环境要求
 

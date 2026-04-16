@@ -1,10 +1,18 @@
 # OpenDev SDK for iOS
 
-**Language:** English (default) · [简体中文](README.zh-CN.md)
+**Documentation:** English (default) · [简体中文](README.zh-CN.md)
 
 OpenDev SDK is a Kotlin Multiplatform client library (authentication, payments, sync, storage). This repository ships a **prebuilt `OpenDevSDK.xcframework`** and a **CocoaPods podspec** for integration without Maven Central or CocoaPods Trunk.
 
 > **Brand:** The public product name is **OpenDev SDK**. Example references to the **Walknote** app illustrate real-world integration only; third-party apps should use their own branding.
+
+## Technical stack (languages)
+
+| Aspect | What this repo contains / uses |
+|--------|--------------------------------|
+| **SDK implementation (source, not in this repo)** | **Kotlin Multiplatform** — Apple targets compiled to native **framework** binaries inside the XCFramework. |
+| **Artifacts here** | Precompiled **XCFramework** (device + simulator slices); **`OpenDevSDK.podspec`** is **Ruby** (CocoaPods metadata only). |
+| **Typical consumer apps** | **Swift** or **Objective-C** in Xcode, via CocoaPods or manual embedding. |
 
 ## Requirements
 
