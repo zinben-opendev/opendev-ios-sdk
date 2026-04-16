@@ -71,6 +71,14 @@ If GitHub warns about large blobs, copy **`gitattributes.template`** to **`.gita
 
 See [CHANGELOG.md](CHANGELOG.md).
 
+## Security
+
+See [SECURITY.md](SECURITY.md) for coordinated vulnerability reporting (do not use public issues for undisclosed problems).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) — this repo ships **prebuilt binaries** only.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
